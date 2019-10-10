@@ -1,0 +1,47 @@
+c1.real=5;
+c1.imaginary=8;
+System.out.println("两个复数相除得："+c1.div(c2));
+}
+}
+class Complex
+{
+double real;
+double imaginary;
+String add(Complex c)
+{
+if(imaginary+c.imaginary>0)
+return (real=real+c.real)+"+"+(imaginary=imaginary+c.imaginary)+"i";
+else if(imaginary+c.imaginary==0)
+return (real=real+c.real)+"";
+else
+return (real=real+c.real)+""+(imaginary=imaginary+c.imaginary)+"i";
+}
+String sub(Complex c)
+{
+if(imaginary-c.imaginary>0)
+return (real=real-c.real)+"+"+(imaginary=imaginary-c.imaginary)+"i";
+else if(imaginary-c.imaginary==0)
+return (real=real-c.real)+"";
+else
+return (real=real-c.real)+""+(imaginary=imaginary-c.imaginary)+"i";
+}
+String mul(Complex c)
+{
+if(imaginary*c.real+real*c.imaginary>0)
+return (real*c.real)-(imaginary*c.imaginary)+"+"+(imaginary*c.real+real*c.imaginary)+"i";
+else if(imaginary*c.real+real*c.imaginary==0)
+return (real*c.real)-(imaginary*c.imaginary)+"";
+else
+return (real*c.real)-(imaginary*c.imaginary)+""+(imaginary*c.real+real*c.imaginary)+"i";
+}
+String div(Complex c)
+{
+if(imaginary*c.real-real*c.imaginary>0)
+return ((real*c.real)+(imaginary*c.imaginary))/(c.real*c.real+c.imaginary*c.imaginary)+"+"+(imaginary*c.real-real*c.imaginary)/(c.real*c.real+c.imaginary*c.imaginary)+"i";
+else if(imaginary*c.real-real*c.imaginary==0)
+return ((real*c.real)+(imaginary*c.imaginary))/(c.real*c.real+c.imaginary*c.imaginary)+"";
+else
+return ((real*c.real)+(imaginary*c.imaginary))/(c.real*c.real+c.imaginary*c.imaginary)+""+(imaginary*c.real-real*c.imaginary)/(c.real*c.real+c.imaginary*c.imaginary)+"i";
+
+}
+}
